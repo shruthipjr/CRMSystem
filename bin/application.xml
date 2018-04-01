@@ -1,0 +1,23 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"  
+            "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- add your bean definitions here! -->
+	<bean id="customerService" class="com.virtualpairprogrammers.services.customers.CustomerManagementServiceMockImpl">
+	
+	
+	</bean>
+	
+	<bean id="diaryManagement" class="com.virtualpairprogrammers.services.diary.DiaryManagementMockImpl">
+	
+	</bean>
+	
+	<bean id="callHandling" class="com.virtualpairprogrammers.services.calls.CallHandlingServiceImpl">
+	
+	<constructor-arg ref="customerService" />
+	<constructor-arg ref="diaryManagement"/>
+	
+	</bean>
+
+</beans>
